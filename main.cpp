@@ -203,7 +203,6 @@ static int cb(struct nfq_q_handle *qh, struct nfgenmsg *nfmsg,
     if(ret) return nfq_set_verdict(qh, id, NF_DROP, 0, NULL);
     return nfq_set_verdict(qh, id, NF_ACCEPT, 0, NULL);
 }
-
 int main(int argc, char **argv)
 {
     if(argc!=2) {
